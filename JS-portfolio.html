@@ -1,0 +1,15 @@
+// Set current year (if footer year element exists)
+const yearElement = document.getElementById("year");
+if (yearElement) {
+  yearElement.textContent = new Date().getFullYear();
+}
+
+// Copy message function
+function copyMsg() {
+  const text =
+    "Hello Rex, I want interior design work for my home/commercial space. Please share details and quotation.";
+
+  navigator.clipboard.writeText(text).then(() => {
+    alert("Message copied! Now paste it in WhatsApp.");
+  });
+}
